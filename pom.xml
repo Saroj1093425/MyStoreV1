@@ -1,0 +1,141 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>MyStoreV1</groupId>
+  <artifactId>MyStoreV1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <!-- Centralized versions -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source> <!-- adjust to your Java version -->
+    <maven.compiler.target>17</maven.compiler.target>
+
+    <selenium.version>4.27.0</selenium.version>
+    <webdrivermanager.version>6.1.1</webdrivermanager.version>
+    <testng.version>7.7.0</testng.version>
+    <junit.version>4.13.1</junit.version>
+    <extentreports.version>5.0.9</extentreports.version>
+    <poi.version>5.2.2</poi.version>
+    <log4j.version>2.24.1</log4j.version>
+  </properties>
+
+  <!-- Add JitPack repo so GitHub packages via com.github.* coordinates work -->
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <!-- JUnit (optional; keep for libraries that need it) -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Selenium -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
+
+    <!-- WebDriverManager -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+    </dependency>
+
+    <!-- TestNG -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- ExtentReports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>${extentreports.version}</version>
+    </dependency>
+
+    <!-- Apache POI (poi-ooxml brings poi) -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    
+    <dependency>
+  <groupId>commons-io</groupId>
+  <artifactId>commons-io</artifactId>
+  <version>2.20.0</version> <!-- or at least 2.17.0+ -->
+</dependency>
+
+
+    <!-- Log4j (use same version for api + core) -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <!--
+      Example: GitHub hosted dependency via JitPack (replace with real repo)
+      Format: com.github.<github-username>:<repo-name>:<tag-or-commit>
+      Remove this block if you don't need any GitHub/JitPack dependency.
+    -->
+    <!--
+    <dependency>
+      <groupId>com.github.someuser</groupId>
+      <artifactId>some-repo</artifactId>
+      <version>v1.0.0</version>
+    </dependency>
+    -->
+  </dependencies>
+
+  <!-- Optional: plugin config for surefire (useful for TestNG) -->
+  <build>
+    <plugins>
+      <!-- Compiler plugin (adapts to properties above) -->
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+
+      <!-- Surefire for running unit tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <!-- enable TestNG suite if needed -->
+          <!--
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+          -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

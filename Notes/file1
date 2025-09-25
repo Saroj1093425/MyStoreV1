@@ -1,0 +1,4 @@
+1) We ware using page factory method to identify the web elements. => So we use @FindBy()
+
+2) We have created a configuration folder that contains config.properties file.
+And to read the config.properties file we would be creating ReadConfig.java file in utilities package.
