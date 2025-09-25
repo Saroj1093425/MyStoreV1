@@ -132,6 +132,11 @@ public class TC_MyAccountPageTest extends BaseClass {
 		Assert.assertEquals(current_URL, "https://automationexercise.com/login");
 		logger.info("User has been logged out successfully");
 		logger.info("*************** TestCase: Verify Invalid Login ends ***************");
-	
+	}
+
+	@Test(enabled = true)
+	public void verifyLoginUsingRegisteredUser()
+	{
+		
 	}
 }
