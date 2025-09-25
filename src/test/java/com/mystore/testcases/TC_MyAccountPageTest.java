@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 import com.mystore.pageobjects.accountCreationDetailsPage;
+import com.mystore.pageobjects.contactUsPage;
 import com.mystore.pageobjects.indexPage;
 import com.mystore.pageobjects.myAccountPage;
 import com.mystore.pageobjects.registeredUserAccountPage;
@@ -162,18 +163,37 @@ public class TC_MyAccountPageTest extends BaseClass {
 	}
 
 	@Test(enabled = true)
-	public void verifyContactUsForm() {
-		logger.info("*************** TestCase/*  */: Verify Contact Us Form starts ***************");
+	public void verifyContactUsFormverifyContactUsForm() {
+		logger.info("*************** TestCase: Verify Contact Us Form starts ***************");
 
 		indexPage indexPg = new indexPage(driver);
 		indexPg.clickOnContactUsBtn();
 		logger.info("Clicked on Contact Us Button");
 
 		String currentUrl = driver.getCurrentUrl();
-		logger.info("Current URL is: " + currentUrl); // <-- Add this line
+		logger.info("Current URL is: " + currentUrl);
 		Assert.assertEquals(currentUrl, "https://automationexercise.com/contact_us", "Contact Us page URL mismatch!");
+
+		contactUsPage contpg = new contactUsPage(driver);
+		Assert.assertTrue(contpg.getInTouchText().isDisplayed(), "'GET IN TOUCH' is not visible on the page!");
+
+
+
+		// Use sample data for form fields
+		contpg.enterName("Test User");
+		contpg.enterEmail("testuser@example.com");
+		contpg.enterSubject("Test Subject");
+		contpg.enterMessage("This is a test message.");
+
+		// Use the constant from contactUsPage for file upload
+		contpg.uploadFile(contactUsPage.DEFAULT_UPLOAD_FILE_PATH);
+		contpg.clickSubmitButton();
+
+
+
 
 		logger.info("Contact Us page URL has been verified successfully");
 		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}
+
 }

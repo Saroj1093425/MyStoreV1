@@ -94,6 +94,9 @@ public class BaseClass {
 		//step3: copy image file to destination
 		FileUtils.copyFile(src, dest);
 	}
+
+
+	
 	
 
 }
