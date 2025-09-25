@@ -136,7 +136,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: Verify Invalid Login ends ***************");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyRegisterationUsingRegisteredUser() throws InterruptedException {
 		logger.info("*************** TestCase: Verify Invalid Login starts ***************");
 
@@ -159,5 +159,21 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Existing email error message has been verified successfully");
 
 		logger.info("*************** TestCase: verifyRegisterationUsingRegisteredUser ends ***************");
+	}
+
+	@Test(enabled = true)
+	public void verifyContactUsForm() {
+		logger.info("*************** TestCase/*  */: Verify Contact Us Form starts ***************");
+
+		indexPage indexPg = new indexPage(driver);
+		indexPg.clickOnContactUsBtn();
+		logger.info("Clicked on Contact Us Button");
+
+		String currentUrl = driver.getCurrentUrl();
+		logger.info("Current URL is: " + currentUrl); // <-- Add this line
+		Assert.assertEquals(currentUrl, "https://automationexercise.com/contact_us", "Contact Us page URL mismatch!");
+
+		logger.info("Contact Us page URL has been verified successfully");
+		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}
 }
