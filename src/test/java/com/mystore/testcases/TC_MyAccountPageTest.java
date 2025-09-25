@@ -87,7 +87,7 @@ public class TC_MyAccountPageTest extends BaseClass{
 		
 		registeredUserAccountPage regUserAcc = new registeredUserAccountPage(driver);
 		String userName = regUserAcc.getAccountUserName();
-		if(userName.equals("demoo8"))
+		if(userName.equals("demoo5"))
 		{
 			logger.info("Verify login Passed");
 			Assert.assertTrue(true);
@@ -96,8 +96,14 @@ public class TC_MyAccountPageTest extends BaseClass{
 		{
 			logger.info("Verify Login Failed");
 			captureScreenShot(driver,"verifyLogin");
-			Assert.assertTrue(false);
+			Assert.assertFalse(true);
 		}
 	}
-
+	
+	@Test()
+	public void VerifyLoginWithInValidLogin()
+	{
+		
+	}
+	
 }

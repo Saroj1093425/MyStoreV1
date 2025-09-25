@@ -6,7 +6,7 @@
       <class name="com.mystore.testcases.TC_MyAccountPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyRegisterataion"/>
+          <include name="VerifyLogin"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.mystore.testcases.TC_MyAccountPageTest -->

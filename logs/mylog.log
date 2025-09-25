@@ -172,3 +172,13 @@
 [INFO ] 2025-09-25 00:31:20.306 [main] MyStoreV1 - Clicked on Sign In Link
 [INFO ] 2025-09-25 00:31:20.556 [main] MyStoreV1 - Email address entered in create account section.
 [INFO ] 2025-09-25 00:31:20.610 [main] MyStoreV1 - Clicked on Sign Up Button
+[INFO ] 2025-09-25 20:08:12.120 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 20:08:12.139 [main] MyStoreV1 - ***************TestCase Verify Login starts*****************
+[INFO ] 2025-09-25 20:08:12.732 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 20:08:12.868 [main] MyStoreV1 - User entered Details and Clicked on Login CTA
+[INFO ] 2025-09-25 20:08:16.030 [main] MyStoreV1 - Verify Login Failed
+[INFO ] 2025-09-25 20:11:11.686 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 20:11:11.696 [main] MyStoreV1 - ***************TestCase Verify Login starts*****************
+[INFO ] 2025-09-25 20:11:12.482 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 20:11:16.420 [main] MyStoreV1 - User entered Details and Clicked on Login CTA
+[INFO ] 2025-09-25 20:11:16.444 [main] MyStoreV1 - Verify login Passed
