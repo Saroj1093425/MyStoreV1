@@ -1,0 +1,39 @@
+[INFO ] 2025-09-25 22:47:18.295 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 22:47:18.344 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 22:47:19.235 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 22:47:22.167 [main] MyStoreV1 - Clicked on Sign In Button
+[INFO ] 2025-09-25 22:47:23.227 [main] MyStoreV1 - User clicked on Sign Out Button
+[INFO ] 2025-09-25 22:47:23.238 [main] MyStoreV1 - User has been logged out successfully
+[INFO ] 2025-09-25 22:47:23.238 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login ends ***************
+[INFO ] 2025-09-25 22:48:53.578 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 22:48:53.611 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 22:48:54.377 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 22:48:56.522 [main] MyStoreV1 - Clicked on Sign In Button
+[INFO ] 2025-09-25 22:48:57.486 [main] MyStoreV1 - User clicked on Sign Out Button
+[INFO ] 2025-09-25 22:48:57.499 [main] MyStoreV1 - User has been logged out successfully
+[INFO ] 2025-09-25 22:48:57.500 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login ends ***************
+[INFO ] 2025-09-25 22:53:49.278 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 22:53:49.327 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 22:53:50.029 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 22:53:50.289 [main] MyStoreV1 - Clicked on Sign In Button
+[INFO ] 2025-09-25 22:55:12.861 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 22:55:12.901 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 22:55:13.534 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 22:55:13.754 [main] MyStoreV1 - Clicked on Sign In Button
+[INFO ] 2025-09-25 23:20:53.194 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 23:20:53.241 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 23:20:53.961 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 23:20:54.394 [main] MyStoreV1 - Clicked on Sign In Button
+[INFO ] 2025-09-25 23:21:44.380 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 23:21:44.434 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 23:21:45.135 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 23:22:05.563 [main] MyStoreV1 - Clicked on Sign In Button
+[INFO ] 2025-09-25 23:23:22.103 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 23:23:22.153 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 23:23:22.999 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 23:24:11.063 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-25 23:24:11.160 [main] MyStoreV1 - *************** TestCase: Verify Invalid Login starts ***************
+[INFO ] 2025-09-25 23:24:27.309 [main] MyStoreV1 - Clicked on Sign In Link
+[INFO ] 2025-09-25 23:24:29.358 [main] MyStoreV1 - Clicked on Sign Up Button
+[INFO ] 2025-09-25 23:24:29.399 [main] MyStoreV1 - Existing email error message has been verified successfully
+[INFO ] 2025-09-25 23:24:29.400 [main] MyStoreV1 - *************** TestCase: verifyRegisterationUsingRegisteredUser ends ***************

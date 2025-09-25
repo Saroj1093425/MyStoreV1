@@ -28,7 +28,7 @@ public class myAccountPage {
 	@FindBy(xpath = "(//input[@placeholder='Name'])[1]")
 	WebElement enterNewUserName;
 	
-	@FindBy(xpath = "(//form[@action='/signup']//input)[2]")
+	@FindBy(xpath = "(//form[@action='/signup']//input)[3]")
 	WebElement enterNewEmailAddress;
 	
 	@FindBy(xpath="(//button[normalize-space()='Signup'])[1]")
@@ -39,6 +39,9 @@ public class myAccountPage {
 
 	@FindBy(xpath="//p[text()='Your email or password is incorrect!']")
 	WebElement InvalidCreds;
+
+	@FindBy(xpath="//form[@action='/signup']//p")
+	WebElement existingEmailError;
 	
 	
 	
@@ -48,7 +51,7 @@ public class myAccountPage {
 		enterNewUserName.sendKeys(userName);
 	}
 	
-	public void enterEmailAddress(String emailAddress)
+	public void enterNewUserEmailAddress(String emailAddress)
 	{
 		enterNewEmailAddress.sendKeys(emailAddress);
 	}
@@ -58,7 +61,7 @@ public class myAccountPage {
 		clickOnSignUpButton.click();
 	}
 	
-	public void enterExistingEmail(String email)
+	public void enterOldUserEmail(String email)
 	{
 		enterExistingEmailAddress.sendKeys(email);
 	}
@@ -78,10 +81,9 @@ public class myAccountPage {
 		return inValidText;
 	}
 	
-	
-	
-	
-	
-	
-
+	public String getExistingEmailError()
+	{
+		String existingEmailUsedText = existingEmailError.getText();
+		return existingEmailUsedText;
+	}
 }

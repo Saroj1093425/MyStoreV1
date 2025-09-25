@@ -36,7 +36,7 @@ public class TC_MyAccountPageTestDataDrivenTesting extends BaseClass{
         
         myAccountPage myAcpg = new myAccountPage(driver);
         myAcpg.enterUserName("demoo9");
-        myAcpg.enterEmailAddress("al09@gmail.com");
+        myAcpg.enterNewUserEmailAddress("al09@gmail.com");
         logger.info("Email address entered in create account section.");
         
         myAcpg.clickSignUp();
@@ -88,7 +88,7 @@ public class TC_MyAccountPageTestDataDrivenTesting extends BaseClass{
 
         myAccountPage myAcpg = new myAccountPage(driver);
 
-        myAcpg.enterExistingEmail(userEmail);
+        myAcpg.enterOldUserEmail(userEmail);
         logger.info("Entered email address");
         
         myAcpg.enterPassword(userPwd);

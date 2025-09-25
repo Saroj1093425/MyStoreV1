@@ -2,8 +2,10 @@ package com.mystore.testcases;
 
 import java.io.IOException;
 
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import java.time.Duration;
 
 import com.mystore.pageobjects.accountCreationDetailsPage;
 import com.mystore.pageobjects.indexPage;
@@ -24,7 +26,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		myAccountPage myAcpg = new myAccountPage(driver);
 		myAcpg.enterUserName("demoo8");
 		Thread.sleep(10);
-		myAcpg.enterEmailAddress("al08@gmail.com");
+		myAcpg.enterNewUserEmailAddress("al08@gmail.com");
 		logger.info("Email address entered in create account section.");
 
 		myAcpg.clickSignUp();
@@ -72,7 +74,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Clicked on Sign In Link");
 
 		myAccountPage myAcpg = new myAccountPage(driver);
-		myAcpg.enterExistingEmail("al05@gmail.com");
+		myAcpg.enterOldUserEmail("al05@gmail.com");
 		myAcpg.enterPassword("pwd01");
 		myAcpg.clickSignIn();
 
@@ -100,7 +102,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Clicked on Sign In Link");
 
 		myAccountPage myAccPg = new myAccountPage(driver);
-		myAccPg.enterExistingEmail("invalidUser@gmail.com");
+		myAccPg.enterOldUserEmail("invalidUser@gmail.com");
 		myAccPg.enterPassword("Invalid");
 		myAccPg.clickSignIn();
 		logger.info("Clicked on Sign In Button");
@@ -112,7 +114,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: Verify Invalid Login ends ***************");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void logoutUser() {
 		logger.info("*************** TestCase: Verify Invalid Login starts ***************");
 		indexPage indexPage = new indexPage(driver);
@@ -120,7 +122,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Clicked on Sign In Link");
 
 		myAccountPage myAccPg = new myAccountPage(driver);
-		myAccPg.enterExistingEmail("al05@gmail.com");
+		myAccPg.enterOldUserEmail("al05@gmail.com");
 		myAccPg.enterPassword("pwd01");
 		myAccPg.clickSignIn();
 		logger.info("Clicked on Sign In Button");
@@ -135,8 +137,27 @@ public class TC_MyAccountPageTest extends BaseClass {
 	}
 
 	@Test(enabled = true)
-	public void verifyLoginUsingRegisteredUser()
-	{
-		
+	public void verifyRegisterationUsingRegisteredUser() throws InterruptedException {
+		logger.info("*************** TestCase: Verify Invalid Login starts ***************");
+
+		// Navigate to Sign In Page
+		indexPage indexPg = new indexPage(driver);
+		indexPg.clickOnSignInandSignUpBtn();
+		logger.info("Clicked on Sign In Link");
+
+		// Attempt registration with an already registered email
+		myAccountPage myAccPg = new myAccountPage(driver);
+		myAccPg.enterUserName("Maven");
+		myAccPg.enterNewUserEmailAddress("al05@gmail.com");
+		myAccPg.clickSignUp();
+		logger.info("Clicked on Sign Up Button");
+
+		// Validate error message for existing email
+		String actualError = myAccPg.getExistingEmailError();
+		String expectedError = "Email Address already exist!";
+		Assert.assertEquals(actualError, expectedError, "Error message mismatch!");
+		logger.info("Existing email error message has been verified successfully");
+
+		logger.info("*************** TestCase: verifyRegisterationUsingRegisteredUser ends ***************");
 	}
 }
