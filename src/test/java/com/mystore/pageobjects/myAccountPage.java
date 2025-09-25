@@ -36,6 +36,9 @@ public class myAccountPage {
 	
 	@FindBy(xpath="(//button[@type='submit'])[1]")
 	WebElement clickOnSignInButton;
+
+	@FindBy(xpath="//p[text()='Your email or password is incorrect!']")
+	WebElement InvalidCreds;
 	
 	
 	
@@ -64,10 +67,15 @@ public class myAccountPage {
 	{
 		enterPassword.sendKeys(pwd);
 	}
-	
 	public void clickSignIn()
 	{
 		clickOnSignInButton.click();
+	}
+
+	public String getInvalidCredsUsedError()
+	{
+		String inValidText = InvalidCreds.getText();
+		return inValidText;
 	}
 	
 	
