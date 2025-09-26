@@ -197,7 +197,9 @@ public class TC_MyAccountPageTest extends BaseClass {
 
 		contpg.clickOnHomeButton();
 		logger.info("Clicked on Home Button");		
+		String homePageUrl = driver.getCurrentUrl();
 
+		Assert.assertEquals(homePageUrl, "https://automationexercise.com/", "Home page URL mismatch!");
 		logger.info("Contact Us page URL has been verified successfully");
 		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}

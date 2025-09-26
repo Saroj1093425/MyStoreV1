@@ -108,3 +108,21 @@
 [INFO ] 2025-09-26 11:03:36.998 [main] MyStoreV1 - Clicked on Home Button
 [INFO ] 2025-09-26 11:03:36.998 [main] MyStoreV1 - Contact Us page URL has been verified successfully
 [INFO ] 2025-09-26 11:03:36.998 [main] MyStoreV1 - *************** TestCase: verifyContactUsForm ends ***************
+[INFO ] 2025-09-26 20:13:41.473 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-26 20:13:41.542 [main] MyStoreV1 - *************** TestCase: Verify Contact Us Form starts ***************
+[INFO ] 2025-09-26 20:13:43.200 [main] MyStoreV1 - Clicked on Contact Us Button
+[INFO ] 2025-09-26 20:13:43.218 [main] MyStoreV1 - Current URL is: https://automationexercise.com/contact_us
+[INFO ] 2025-09-26 20:13:44.068 [main] MyStoreV1 - Alert has been accepted successfully
+[INFO ] 2025-09-26 20:13:44.114 [main] MyStoreV1 - Success message has been verified successfully
+[INFO ] 2025-09-26 20:13:46.656 [main] MyStoreV1 - Clicked on Home Button
+[INFO ] 2025-09-26 20:13:46.657 [main] MyStoreV1 - Contact Us page URL has been verified successfully
+[INFO ] 2025-09-26 20:13:46.657 [main] MyStoreV1 - *************** TestCase: verifyContactUsForm ends ***************
+[INFO ] 2025-09-26 20:18:08.873 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-26 20:18:08.926 [main] MyStoreV1 - *************** TestCase: Verify Contact Us Form starts ***************
+[INFO ] 2025-09-26 20:18:10.618 [main] MyStoreV1 - Clicked on Contact Us Button
+[INFO ] 2025-09-26 20:18:10.636 [main] MyStoreV1 - Current URL is: https://automationexercise.com/contact_us
+[INFO ] 2025-09-26 20:18:11.587 [main] MyStoreV1 - Alert has been accepted successfully
+[INFO ] 2025-09-26 20:18:11.618 [main] MyStoreV1 - Success message has been verified successfully
+[INFO ] 2025-09-26 20:18:14.162 [main] MyStoreV1 - Clicked on Home Button
+[INFO ] 2025-09-26 20:18:14.178 [main] MyStoreV1 - Contact Us page URL has been verified successfully
+[INFO ] 2025-09-26 20:18:14.178 [main] MyStoreV1 - *************** TestCase: verifyContactUsForm ends ***************
