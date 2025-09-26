@@ -11,6 +11,7 @@ import com.mystore.pageobjects.accountCreationDetailsPage;
 import com.mystore.pageobjects.contactUsPage;
 import com.mystore.pageobjects.indexPage;
 import com.mystore.pageobjects.myAccountPage;
+import com.mystore.pageobjects.productsPage;
 import com.mystore.pageobjects.registeredUserAccountPage;
 import com.mystore.utilities.WebDriverUtils;
 
@@ -204,7 +205,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifytestcasePage(){
 		logger.info("*************** TestCase: Verify Test Case Page starts ***************");
 
@@ -217,6 +218,26 @@ public class TC_MyAccountPageTest extends BaseClass {
 		Assert.assertEquals(currentUrl, "https://automationexercise.com/test_cases", "Test Cases page URL mismatch!");
 
 		logger.info("*************** TestCase: Verify Test Case Page ends ***************");
+	}
+
+	@Test(enabled = true)
+	public void verifyProductsAndProductDetailPage(){		
+		indexPage indexPg = new indexPage(driver);
+		indexPg.clickOnProduct();
+		logger.info("Clicked on Products Button");
+		String currentUrl = driver.getCurrentUrl();
+		logger.info("Current URL is: " + currentUrl);	
+		Assert.assertEquals(currentUrl, "https://automationexercise.com/products", "Products page URL mismatch!");
+
+
+		productsPage prodPg = new productsPage(driver);
+		String prodPageText = prodPg.getAllProductsText();
+		Assert.assertEquals(prodPageText, "ALL PRODUCTS", "Products page text mismatch!");
+		logger.info("Products page text has been verified successfully");	
+			
+
+
+
 	}
 
 

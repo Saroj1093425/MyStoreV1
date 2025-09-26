@@ -131,3 +131,7 @@
 [INFO ] 2025-09-26 20:28:48.645 [main] MyStoreV1 - Clicked on Test Cases Button
 [INFO ] 2025-09-26 20:28:48.668 [main] MyStoreV1 - Current URL is: https://automationexercise.com/test_cases
 [INFO ] 2025-09-26 20:28:48.670 [main] MyStoreV1 - *************** TestCase: Verify Test Case Page ends ***************
+[INFO ] 2025-09-26 22:21:39.858 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-26 22:21:42.128 [main] MyStoreV1 - Clicked on Products Button
+[INFO ] 2025-09-26 22:21:42.139 [main] MyStoreV1 - Current URL is: https://automationexercise.com/products
+[INFO ] 2025-09-26 22:21:42.168 [main] MyStoreV1 - Products page text has been verified successfully
