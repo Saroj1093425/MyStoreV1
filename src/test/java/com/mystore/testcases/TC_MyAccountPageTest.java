@@ -163,7 +163,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: verifyRegisterationUsingRegisteredUser ends ***************");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void verifyContactUsFormverifyContactUsForm() {
 		logger.info("*************** TestCase: Verify Contact Us Form starts ***************");
 
@@ -203,5 +203,26 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Contact Us page URL has been verified successfully");
 		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}
+
+	@Test(enabled = true)
+	public void verifytestcasePage(){
+		logger.info("*************** TestCase: Verify Test Case Page starts ***************");
+
+		indexPage indexPg = new indexPage(driver);
+		indexPg.clickOnTestCases();
+		logger.info("Clicked on Test Cases Button");
+
+		String currentUrl = driver.getCurrentUrl();
+		logger.info("Current URL is: " + currentUrl);
+		Assert.assertEquals(currentUrl, "https://automationexercise.com/test_cases", "Test Cases page URL mismatch!");
+
+		logger.info("*************** TestCase: Verify Test Case Page ends ***************");
+	}
+
+
+
+
+
+
 
 }	

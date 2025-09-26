@@ -126,3 +126,8 @@
 [INFO ] 2025-09-26 20:18:14.162 [main] MyStoreV1 - Clicked on Home Button
 [INFO ] 2025-09-26 20:18:14.178 [main] MyStoreV1 - Contact Us page URL has been verified successfully
 [INFO ] 2025-09-26 20:18:14.178 [main] MyStoreV1 - *************** TestCase: verifyContactUsForm ends ***************
+[INFO ] 2025-09-26 20:28:47.726 [main] MyStoreV1 - URL Launched
+[INFO ] 2025-09-26 20:28:47.800 [main] MyStoreV1 - *************** TestCase: Verify Test Case Page starts ***************
+[INFO ] 2025-09-26 20:28:48.645 [main] MyStoreV1 - Clicked on Test Cases Button
+[INFO ] 2025-09-26 20:28:48.668 [main] MyStoreV1 - Current URL is: https://automationexercise.com/test_cases
+[INFO ] 2025-09-26 20:28:48.670 [main] MyStoreV1 - *************** TestCase: Verify Test Case Page ends ***************
