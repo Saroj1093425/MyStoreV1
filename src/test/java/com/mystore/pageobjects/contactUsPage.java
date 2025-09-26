@@ -40,6 +40,13 @@ public class contactUsPage {
     @FindBy(xpath = "//input[@name='submit']")
     WebElement submitButton;   
     
+    @FindBy(xpath = "//div[@class='status alert alert-success']")
+    WebElement successMessage;  
+
+    @FindBy(xpath = "//a[@class='btn btn-success']")
+    WebElement homeButtonCTA;    
+
+    
 
 
 
@@ -80,6 +87,15 @@ public class contactUsPage {
         submitButton.click();
     }   
 
+    public String getSuccessMessageString()
+    {
+        return successMessage.getText();
+    }   
+
+    public void clickOnHomeButton()
+    {
+         homeButtonCTA.click();
+    }       
 
 
 

@@ -12,6 +12,7 @@ import com.mystore.pageobjects.contactUsPage;
 import com.mystore.pageobjects.indexPage;
 import com.mystore.pageobjects.myAccountPage;
 import com.mystore.pageobjects.registeredUserAccountPage;
+import com.mystore.utilities.WebDriverUtils;
 
 public class TC_MyAccountPageTest extends BaseClass {
 
@@ -177,8 +178,6 @@ public class TC_MyAccountPageTest extends BaseClass {
 		contactUsPage contpg = new contactUsPage(driver);
 		Assert.assertTrue(contpg.getInTouchText().isDisplayed(), "'GET IN TOUCH' is not visible on the page!");
 
-
-
 		// Use sample data for form fields
 		contpg.enterName("Test User");
 		contpg.enterEmail("testuser@example.com");
@@ -189,11 +188,18 @@ public class TC_MyAccountPageTest extends BaseClass {
 		contpg.uploadFile(contactUsPage.DEFAULT_UPLOAD_FILE_PATH);
 		contpg.clickSubmitButton();
 
+		WebDriverUtils.acceptAlert(driver);
+		logger.info("Alert has been accepted successfully");
 
+		String successmsg = contpg.getSuccessMessageString();
+		Assert.assertEquals(successmsg, "Success! Your details have been submitted successfully.", "Success message mismatch!");
+		logger.info("Success message has been verified successfully");	
 
+		contpg.clickOnHomeButton();
+		logger.info("Clicked on Home Button");		
 
 		logger.info("Contact Us page URL has been verified successfully");
 		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}
 
-}
+}	
