@@ -234,6 +234,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		String prodPageText = prodPg.getAllProductsText();
 		Assert.assertEquals(prodPageText, "ALL PRODUCTS", "Products page text mismatch!");
 		logger.info("Products page text has been verified successfully");	
+	
 			
 
 
