@@ -17,7 +17,7 @@ import com.mystore.utilities.WebDriverUtils;
 
 public class TC_MyAccountPageTest extends BaseClass {
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 1)
 	public void verifyRegisterataion() throws InterruptedException {
 
 		logger.info("***************TestCase Verify Registration and Login starts*****************");
@@ -27,9 +27,9 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Clicked on Sign In Link");
 
 		myAccountPage myAcpg = new myAccountPage(driver);
-		myAcpg.enterUserName("demoo8");
+		myAcpg.enterUserName("demo10");
 		Thread.sleep(10);
-		myAcpg.enterNewUserEmailAddress("al08@gmail.com");
+		myAcpg.enterNewUserEmailAddress("al10@gmail.com");
 		logger.info("Email address entered in create account section.");
 
 		myAcpg.clickSignUp();
@@ -68,7 +68,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("Account has been created");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 2)
 	public void VerifyLogin() throws IOException {
 		logger.info("***************TestCase Verify Login starts*****************");
 
@@ -95,7 +95,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		}
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 3)
 	public void verifyLoginWithInvalidCredentials() {
 		logger.info("*************** TestCase: Verify Invalid Login starts ***************");
 
@@ -117,7 +117,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: Verify Invalid Login ends ***************");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 4)
 	public void logoutUser() {
 		logger.info("*************** TestCase: Verify Invalid Login starts ***************");
 		indexPage indexPage = new indexPage(driver);
@@ -139,7 +139,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: Verify Invalid Login ends ***************");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 5)
 	public void verifyRegisterationUsingRegisteredUser() throws InterruptedException {
 		logger.info("*************** TestCase: Verify Invalid Login starts ***************");
 
@@ -164,7 +164,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: verifyRegisterationUsingRegisteredUser ends ***************");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 6)
 	public void verifyContactUsFormverifyContactUsForm() {
 		logger.info("*************** TestCase: Verify Contact Us Form starts ***************");
 
@@ -205,7 +205,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: verifyContactUsForm ends ***************");
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true,priority = 7)
 	public void verifytestcasePage(){
 		logger.info("*************** TestCase: Verify Test Case Page starts ***************");
 
@@ -220,7 +220,7 @@ public class TC_MyAccountPageTest extends BaseClass {
 		logger.info("*************** TestCase: Verify Test Case Page ends ***************");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true,priority = 8)
 	public void verifyProductsAndProductDetailPage(){		
 		indexPage indexPg = new indexPage(driver);
 		indexPg.clickOnProduct();

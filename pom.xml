@@ -1,6 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -21,6 +21,8 @@
     <extentreports.version>5.0.9</extentreports.version>
     <poi.version>5.2.2</poi.version>
     <log4j.version>2.24.1</log4j.version>
+    <!-- Lombok version: keep reasonably recent -->
+    <lombok.version>1.18.42</lombok.version>
   </properties>
 
   <!-- Add JitPack repo so GitHub packages via com.github.* coordinates work -->
@@ -32,6 +34,14 @@
   </repositories>
 
   <dependencies>
+    <!-- Lombok (provided) -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
     <!-- JUnit (optional; keep for libraries that need it) -->
     <dependency>
       <groupId>junit</groupId>
@@ -77,10 +87,10 @@
     </dependency>
     
     <dependency>
-  <groupId>commons-io</groupId>
-  <artifactId>commons-io</artifactId>
-  <version>2.20.0</version> <!-- or at least 2.17.0+ -->
-</dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.20.0</version> <!-- or at least 2.17.0+ -->
+    </dependency>
 
 
     <!-- Log4j (use same version for api + core) -->
@@ -95,18 +105,6 @@
       <version>${log4j.version}</version>
     </dependency>
 
-    <!--
-      Example: GitHub hosted dependency via JitPack (replace with real repo)
-      Format: com.github.<github-username>:<repo-name>:<tag-or-commit>
-      Remove this block if you don't need any GitHub/JitPack dependency.
-    -->
-    <!--
-    <dependency>
-      <groupId>com.github.someuser</groupId>
-      <artifactId>some-repo</artifactId>
-      <version>v1.0.0</version>
-    </dependency>
-    -->
   </dependencies>
 
   <!-- Optional: plugin config for surefire (useful for TestNG) -->
@@ -114,11 +112,26 @@
     <plugins>
       <!-- Compiler plugin (adapts to properties above) -->
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.11.0</version>
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
+          <fork>true</fork>
+          <!-- Ensure annotation processor (Lombok) is provided to the compiler separately -->
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
+          <!-- Add opens to avoid IllegalAccessError on JDK 16+/17+ if needed -->
+          <compilerArgs>
+            <arg>--add-opens</arg>
+            <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+          </compilerArgs>
         </configuration>
       </plugin>
 
